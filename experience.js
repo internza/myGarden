@@ -478,6 +478,7 @@ const createGalaxy = () => {
 
   // Load textures for overlay
   const overlayTextures = [
+    textureLoader.load("/knickknack.jpg"),
     textureLoader.load("/Perplexed.JPG"),
     textureLoader.load("/P1.JPG"),
     textureLoader.load("/Nutrify.JPG"),
@@ -487,7 +488,6 @@ const createGalaxy = () => {
     textureLoader.load("/googleclone.JPG"),
     textureLoader.load("/hulu.JPG"),
     textureLoader.load("/twitter.JPG"),
-    textureLoader.load("/library.JPG"),
     textureLoader.load("/skybackground.jpg"),
     textureLoader.load("/skybackground.jpg"),
   ];
@@ -498,40 +498,41 @@ const boxGeometry = new THREE.BoxGeometry(45, 40, 2);
 // 1verlay planes
 let planes = [];
 const positions = [
-  [-100, -80, -20, Math.PI / 2.2],
-  [-95, -90, 30, Math.PI / -2.5],
-  [-65, -100, 75, Math.PI / -4],
-  [-25, -110, 105, Math.PI / -7.5],
+  [-100, -80, -20, Math.PI / 2.2], // AR Knick Knack
+  [-95, -90, 30, Math.PI / -2.5], // Perplexed
+  [-65, -100, 75, Math.PI / -4], // Player One
+  [-25, -110, 105, Math.PI / -7.5], // Nutrify
 
-  [70, -175, -70, Math.PI / -4],
-  [105, -155, 10, Math.PI / 2],
-  [90, -145, 60, Math.PI / 3],
-  [55, -130, 95, Math.PI / 7],
+  [70, -175, -70, Math.PI / -4], // ML Car
+  [105, -155, 10, Math.PI / 2], // 3D Portfolio
+  [90, -145, 60, Math.PI / 3], // Portfolio
+  [55, -130, 95, Math.PI / 7], // Google Clone
 
-  [25, -190, -100, Math.PI / -8.5],
-  [-30, -200, -105, 0.25],
+  [25, -190, -100, Math.PI / -8.5], // Hulu Clone
+  [-30, -200, -105, 0.25], // Twitter Clone
   // [-15, -210, -110, Math.PI / -0.25],
   // [-55, -220, -100, Math.PI / 5.5],
 ];
 
 // Manually set text positions and rotations
 const textPositions = [
-  [-95, -75, -35, -Math.PI / 2], // Perplexed
-  [-95, -85, 15, Math.PI / -2.5], // Player One
-  [-67, -98, 70, Math.PI / -4], // Nutrify
-  [-30, -110, 105, Math.PI / -7.5], // Machine Learning Car
+  [-95, -75, -35, -Math.PI / 2], // AR Knick Knack
+  [-95, -85, 15, Math.PI / -2.5], // Perplexed
+  [-67, -98, 70, Math.PI / -4], // Player One
+  [-30, -110, 105, Math.PI / -7.5], // Nutrify
 
-  [108, -175, -65, Math.PI / 1.35], // Three.js Portfolio
-  [130, -155, 20, Math.PI / 2], // Portfolio
-  [105, -142, 75, Math.PI / 3], // Google Clone
-  [60, -130, 110, Math.PI / 7], // Hulu Clone
+  [108, -175, -65, Math.PI / 1.35], // ML Car
+  [130, -155, 20, Math.PI / 2], // 3D Portfolio
+  [105, -142, 75, Math.PI / 3], // Portfolio
+  [60, -130, 110, Math.PI / 7], // Google Clone
 
-  [68, -188, -100, Math.PI / 1.15], // Twitter Clone
-  [-10, -200, -115, Math.PI / 0.95], // Readora
+  [68, -188, -100, Math.PI / 1.15], // Hulu Clone
+  [-10, -200, -115, Math.PI / 0.95], // Twitter Clone
 ];
 
 // Project names
 const projectNames = [
+  "AR Knick Knack",
   "Perplexed",
   "Player One",
   "Nutrify",
@@ -541,10 +542,10 @@ const projectNames = [
   "Google Clone",
   "Hulu Clone",
   "Twitter Clone",
-  "Readora",
 ];
 
 const projectNameColors = [
+  0xffffff, // AR Knick Knack
   0xffffff, // Perplexed
   0xffffff, // Player One
   0x000000, // Nutrify
@@ -554,11 +555,11 @@ const projectNameColors = [
   0x000000, // Google Clone
   0xffffff, // Hulu Clone
   0x000000, // Twitter Clone
-  0x000000, // Readora
 ];
 
 // Project URLs
 const projectUrls = [
+  "https://github.com/internza/AR-KnickKnack/tree/master", // AR Knick Knack
   "https://day-ztrivia.vercel.app/", // Perplexed
   "https://day-zgamer.vercel.app/", // Player One
   "https://day-ztracker-react.vercel.app/", // Nutrify
@@ -568,7 +569,6 @@ const projectUrls = [
   "https://day-z-search.vercel.app/", // Google Clone
   "https://hulu-cloned-mu.vercel.app/", // Hulu Clone
   "https://twitter-clone-steel-one.vercel.app/", // Twitter Clone
-  "https://react-bookstore-zeta.vercel.app/", // Readora
 ];
 
 let textMeshes = [];
